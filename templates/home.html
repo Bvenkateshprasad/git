@@ -1,0 +1,208 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goshan Technosoft</title>
+    <!-- for icon in tittle bar -->
+    <link rel="icon" href="{% static 'image/Asset.png'%}">
+    <!-- link css created in css -->
+    <link rel="stylesheet" href="{% static 'css/padding.css'%}">
+    <!-- icon library fb,insta, -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+  
+  <header>
+  <!-- ------------------NAV BAR--------------------------- --------------------->
+    <div class="topnav topnav-default topnav-fixed-top">
+
+     
+      <div class="iconn" class="fixed-top">
+      <a  href="/">
+        <img src="{% static 'image/logo2.png'%}"  alt="Your logo" title="Your logo" style="height:200px" />
+      </a>
+      </div> 
+        
+        <div class="topnav-item">
+          <a class="active" href="/"><b>Home</b></a>
+          <a href="/services"><b>Services</b></a>
+          <a href="/about"><b>About</b></a>
+          <a href="/contact"><b>Contact</b></a> 
+          <!-- <div class="dropdown">
+            <button class="dropbtn">Contact
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>  -->
+        </div>
+    </div>
+    </header>
+  
+
+ <!-----------------------------END OF NAVBAR--------------------------------------------------->      
+
+
+     
+<!-------------------------------------BANNER--------------------------------- -->
+
+
+
+  <div class="slideshow-container">
+
+  <div class="mySlides fade">
+    
+    <img src="{% static 'image/123.png'%}" style="width:100%">
+   
+  </div>
+  
+  <div class="mySlides fade">
+   
+    <img src="{% static 'image/123.png'%}" style="width:100%">
+  
+  </div>
+  
+  <div class="mySlides fade">
+    
+    <img src="{% static 'image/123.png'%}" style="width:100%">
+    
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+  
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+<!-- ----------------------------END OF BANNER ----------------------------------------------------------------- -->
+
+<!------------------------------- BOTTOM SINGLE IMAGE--------------------------------------------------->
+      <div class="image01">
+        
+        <img src="{% static 'image/2nd.jpg'%}" alt="Notebook" width="800" height="500">
+        
+          
+      </div>
+      <!-----------------------------END OF IMAGE------------------------------------------------------  -->
+      <!-- -----------MESSAGE BOX SIDE OF IMAGE-------------------------------------------- -->
+
+      <div class="textbox">
+        <h1>Text area</h1>
+        <p> Django (/ˈdʒæŋɡoʊ/ JANG-goh; sometimes stylized as django)[6] is a Python-based free and open-source web framework that follows the model–template–views (MTV) architectural pattern.[7][8] It is maintained by the Django Software Foundation (DSF), an independent organization established in the US as a 501(c)(3) non-profit.
+
+          Django's primary goal is to ease the creation of complex, </p>
+      </div>
+<!-- ------------------------END OF MESSAGE BOX ---------------------------------------------- -->
+     
+
+<!-- ----------------scroll top button------------------ -->
+<button onclick="topFunction()" id="myBtn" title="Go to top"> Go to <br> Top</button>
+
+<!-- js script -->
+<script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+<!-- ---------------------end of scroll top button------------------ -->
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ------footer------ -->
+  
+     
+  
+        
+        <footer>
+          <div class="container">
+           <!-- Add font awesome icons -->
+           <a href="#" class="fa fa-facebook"></a>
+           <a href="#" class="fa fa-google"></a>
+           <a href="#" class="fa fa-instagram"></a>
+           <a href="#" class="fa fa-linkedin"></a>
+          <div class="footer-copy">
+          <p> copyrights 2020 </p>
+          </div>
+            
+                
+          
+          <div class="footer-content">
+            <a href="/services"><b>Services</b></a>
+            <a href="/about"  ><b>About</b></a>
+            <a href="/contact"  ><b>Contact</b></a>
+          </div>
+          </div>
+      
+          
+
+        </footer>
+</body>
+</html>
